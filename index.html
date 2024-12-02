@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 
@@ -30,14 +30,13 @@ window.streams = {
   stations: [
     {
       name: "MATADORA MIX",
-      hash: "VALLENATO",
+      hash: "MATADORAMIX",
       description: "",
       album: "assets/cover3.png",
-      cover: "assets/cover3.png",
-      //api: "api.php?url=https://stream.zeno.fm/86d5acbxcq1vv",
-      api: "api.php?url=https://stream.zeno.fm/86d5acbxcq1vv",
+      cover: "assets/cover.png",
+      api: "https://api.zeno.fm/mounts/metadata/subscribe/86d5acbxcq1vv",
       stream_url: "https://stream.zeno.fm/86d5acbxcq1vv",
-      server: "link.zeno.fm",
+      server: "itunes", // Use iTunes API
       program: {
         time: "24/7",
         name: "VALLENATO",
@@ -52,10 +51,10 @@ window.streams = {
       description: "",
       album: "assets/cover1.png",
       cover: "assets/cover1.png",
-      //api: "api.php?url=https://stream.zeno.fm/ptqtr8urtfiuv",
-      api: "https://stream.zeno.fm/ptqtr8urtfiuv",
+      //api: "https://api.zeno.fm/mounts/metadata/subscribe/ptqtr8urtfiuv",
+      api: "https://api.zeno.fm/mounts/metadata/subscribe/ptqtr8urtfiuv",
       stream_url: "https://stream.zeno.fm/ptqtr8urtfiuv",
-      server: "link.zeno.fm",
+      server: "itunes", // Use iTunes API
       program: {
         time: "24/7",
         name: "SOLO EXITOS",
@@ -65,16 +64,16 @@ window.streams = {
       },
     },
     {
-      name: "RADIO POWER",
+      name: "URBANA",
       hash: "URBANA",
       description: "",
       album: "assets/cover2.png",
       cover: "assets/cover2.png",
-      //api: "api.php?url=https://stream.zeno.fm/cxf1r8zukyhuv",
-      api: "https://stream.zeno.fm/cxf1r8zukyhuv",
+      //api: "https://api.zeno.fm/mounts/metadata/subscribe/cxf1r8zukyhuv",
+      api: "https://api.zeno.fm/mounts/metadata/subscribe/cxf1r8zukyhuv",
       stream_url: "https://stream.zeno.fm/cxf1r8zukyhuv",
       tv_url: 'https://anym3u8player.com/player-generator/mplay.php?data=nCLCQmLtFml/wHRSNI+EmeWTWnLVqRlU3wMc3UlSc2jOO1lVvf7Lw9GdhnVmzzBaEVY4ArIlaquFnTnFndotnN9fAUCAjdrC5BzgmFlS/vjuv8i8jaiOcy6oOn3v7198R0GqeTkgJGEHfDkPFfLLhW5RrLZ0LgLX82uToJwqeuocFHY5WD2wKaUUzmbFBDwm1Ga5HbX5iO3t4IFcG8wq5d9lBzA9k8nUwgnsId+4wwOUl3+80ArgDQ9Yj9o1o7lVqiKzHDIYsDpUm8UG65pbkQ==',
-      server: "link.zeno.fm",
+      server: "itunes", // Use iTunes API
       program: {
         time: "24/7",
         name: "URBANA",
@@ -104,20 +103,10 @@ window.streams = {
         <!-- toggles -->
         <div class="toggle-options flex items-start">
           <div class="online-tv-header"></div>
-          <button class="btn l:none" data-outside="offcanvas-history">
-            <svg class="i i-music" viewBox="0 0 24 24">
-              <path d="M22 16V2L9 5v13"></path>
-              <circle cx="5" cy="18" r="4"></circle>
-              <circle cx="18" cy="16" r="4"></circle>
-            </svg>
-          </button>
+          
+		  
          
-          <button class="btn l:none" data-outside="modal-lyrics">
-            <svg class="i i-list-music" viewBox="0 0 24 24">
-              <path d="M16 8h6V3h-6v15M2 3h9M2 8h9m-9 5h3"></path>
-              <circle cx="12" cy="18" r="4"></circle>
-            </svg>
-          </button>
+          
           <button class="btn l:none" data-outside="offcanvas-stations">
             <svg class="i i-angles-down" viewBox="0 0 24 24">
   <path d="m6 13 6 6 6-6M6 5l6 6 6-6"></path>
@@ -179,14 +168,7 @@ window.streams = {
             <!-- TV -->
             <div class="online-tv"></div>
             <!-- Historial -->
-            <button class="player-button player-button-history" data-outside="offcanvas-history">
-              <svg class="i i-music" viewBox="0 0 24 24">
-                <path d="M22 16V2L9 5v13"></path>
-                <circle cx="5" cy="18" r="4"></circle>
-                <circle cx="18" cy="16" r="4"></circle>
-              </svg>
-              Han Sonado
-            </button>
+            
             <!-- Volumen -->
             <div class="player-button player-button-volume">
               <button class="player-button player-button-volume-toggle" data-outside="player-volume">
